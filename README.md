@@ -6,7 +6,7 @@ This repository is is built step by step in the tutorial.
 
 This repository now includes steps for GitHub
 
-## Git commands and their use
+# Git commands and their use
  //global -> set the username and email for every repository on your computer
  //remove global to set username and email for current repo only.
  git config --global user.name "<author/userName>"
@@ -16,6 +16,7 @@ This repository now includes steps for GitHub
  //cd into the project repository
  git init
 
+ //check all file including hidden
  ls -la
 
  //check status of file ('Untracked', 'Modified', 'Changes to be committed')
@@ -29,10 +30,14 @@ This repository now includes steps for GitHub
  git status
 
  git commit -m "<CustomMessage>"
+
+ //add and commit in one line
+ git commit -am "<customMessage>"
  
  //view the history of commits for a repository
  git log
 
+ ## Create a new branch
  //create a new branch
  git branch <branch-name>
 
@@ -43,8 +48,7 @@ This repository now includes steps for GitHub
  git checkout <branch-name>
  git checkout -b <branch-name>  //create and switched the branch, if it does not exist
 
-
-#Merge Branches
+### Merge Branches
  //first move to main branch (on which we want to merge)
  git checkout master
 
@@ -53,27 +57,26 @@ This repository now includes steps for GitHub
  //delete branch
  git branch -d <branch-name>
 
-#working with remote repository
+## working with remote repository
 
  git remote add origin <https://github.com/username/repository.git>
  //NOTE: for this you will need PAT (access token) to your github
 
-#Git Pull from GitHub
+### Git Pull from GitHub
  //fetch gets all the change history of a tracked branch/repo from a remote repository
  git fetch origin
 
  //merge combines the current branch, with a specified branch from remote to local repo
  git merge origin/master
 
-
  //But what if you just want to update your local repository, without going through all those steps. pull is a combination of fetch and merge.
  git pull origin
 
-#Git Push to GitHub
+### Git Push to GitHub
  //make changes to local git repository and push to remote repository after commit
  git push origin
 
-#Git Pull branch from GitHub
+### Git Pull branch from GitHub
  //make new branch at remote repo and then
  git pull
  //list all branch (local + remote)
@@ -82,7 +85,7 @@ This repository now includes steps for GitHub
  git checkout <branchName>
  git pull
 
-#Push branch to GitHub
+### Push branch to GitHub
  //create a new branch in local repo
  git branch -b <branchName>
  //make changes and commit, then

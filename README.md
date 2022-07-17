@@ -7,16 +7,12 @@ This repository is is built step by step in the tutorial.
 This repository now includes steps for GitHub
 
 # Git commands and their use
- //global -> set the username and email for every repository on your computer
- 
- //remove global to set username and email for current repo only.
- 
- git config --global user.name "<author/userName>"
- 
- git config --global user.email "<email-registered-with-GitHub>"
+ //global -> set the username and email for every repository on your computer  
+ //remove global to set username and email for current repo only.   
+ git config --global user.name "<author/userName>"   
+ git config --global user.email "<email-registered-with-GitHub>"  
 
-
- 
+ <br><br>
  //cd into the project repository
  
  git init

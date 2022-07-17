@@ -16,10 +16,12 @@ This repository now includes steps for GitHub
  git config --global user.email "<email-registered-with-GitHub>"
 
 
+ 
  //cd into the project repository
  
  git init
 
+ 
  //check all file including hidden
  
  ls -la

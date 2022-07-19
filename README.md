@@ -6,7 +6,7 @@ This repository includes steps for Git pull & push with GitHub
 
 > # Git commands and their use
  //global -> set the username and email for every repository on your computer  
- //remove global to set username and email for current repo only.   
+ //remove global to set username and email for current repo only.
  - git config --global user.name "author/userName"   
  - git config --global user.email "email-registered-with-GitHub"  
 

@@ -50,25 +50,25 @@ This repository includes steps for Git pull & push with GitHub
  
  ## Create a new branch  
  //create a new branch  
- git branch <branch-name>  
+ git branch branch-name  
 
  //list all branch  
  git branch  
 
  //change working branch to the given branch name  
- git checkout <branch-name>  
+ git checkout branch-name  
  
  //create and switched the branch, if it does not exist  
- git checkout -b <branch-name>  
+ git checkout -b branch-name  
 
 ### Merge Branches  
  //first move to main branch (on which we want to merge)  
  git checkout master  
 
- git merge <<branch-name>>  
+ git merge << branch-name >>  
 
  //delete branch  
- git branch -d <<branch-name>>  
+ git branch -d << branch-name >>  
 
 ## working with remote repository  
 

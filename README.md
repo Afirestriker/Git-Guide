@@ -1,10 +1,8 @@
 # Hello World
 Hello World repository for Git tutorial
-This is an example repository for the Git tutorial on W3school.com
+This is an example repository for the Git tutorial
 
-This repository is is built step by step in the tutorial.
-
-This repository now includes steps for GitHub
+This repository includes steps for Git pull & push with GitHub
 
 > # Git commands and their use
  //global -> set the username and email for every repository on your computer  

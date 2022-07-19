@@ -53,6 +53,9 @@ This repository includes steps for Git pull & push with GitHub
  //create a new branch  
  - git branch \<branch-name>  
 
+ //rename a branch (rename current branch)  
+ git branch -m \<new-branch-name>
+ 
  //list all branch  
  - git branch  
 

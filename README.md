@@ -26,7 +26,7 @@ This repository includes steps for Git pull & push with GitHub
 
 
  <br> 
- //check all file including hidden   
+ //check all file including hidden  
  ls -la  
 
  <br>

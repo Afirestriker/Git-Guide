@@ -73,7 +73,7 @@ This repository includes steps for Git pull & push with GitHub
 # working with remote repository  
 
  git remote add origin https://github.com/username/repository.git  
- //NOTE: for this you will need PAT (access token) to your GitHub (if using Git Bash)
+ //NOTE: for this you will need PAT (access token) to your GitHub (if using Git Bash)  
  //Recommend: To use Visual Studio - add GitHub to Visual Studio
   
  //check the origin value - to which directory its point for fetch/pull and push command  

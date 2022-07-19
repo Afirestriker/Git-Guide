@@ -54,7 +54,7 @@ This repository includes steps for Git pull & push with GitHub
  - git branch \<branch-name>  
 
  //rename a branch (rename current branch)  
- -- git branch -m \<new-branch-name>
+ - git branch -m \<new-branch-name>
  
  //list all branch  
  - git branch  

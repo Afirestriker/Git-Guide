@@ -7,8 +7,8 @@ This repository includes steps for Git pull & push with GitHub
 > # Git commands and their use
  //global -> set the username and email for every repository on your computer  
  //remove global to set username and email for current repo only.   
- git config --global user.name "<author/userName>"   
- git config --global user.email "<email-registered-with-GitHub>"  
+ git config --global user.name "author/userName"   
+ git config --global user.email "email-registered-with-GitHub"  
 
  //cd into the folder where you want to create new or clone project repository   
 
@@ -18,10 +18,10 @@ This repository includes steps for Git pull & push with GitHub
 
  ## Clone repository from GitHub
  //to clone git, these will add new directory in current folder with the repository name  
- git clone <https://github.com/username/repository.git>  
+ git clone https://github.com/username/repository.git  
   
  //to clone specific folder inside repository add folder name at the end of above command with space  
- git clone <https://github.com/username/repository.git> <folderName>  
+ git clone https://github.com/username/repository.git \<folderName>  
  
  
  //check all file including hidden  

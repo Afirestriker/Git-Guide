@@ -72,12 +72,19 @@ This repository includes steps for Git pull & push with GitHub
  - git branch -d \<branch-name>  
 
 # working with remote repository  
-
- - git remote add origin https://github.com/username/repository.git  
  //NOTE: for this you will need PAT (access token) to your GitHub (if using Git Bash)  
  //Recommend: To use Visual Studio - add GitHub to Visual Studio
+ 
+ - git remote add origin https://github.com/username/repository.git  
+   //NOTE: here name "origin" can be any other name, you can add multiple remote with different name and update or remove them using below command
+ 
+ //update git remote value for particualar remote
+ - git remote set-url origin https://github.com/username/repository.git  
+ 
+ //remove git remote for particular value
+ - git remote remove origin
   
- //check the origin value - to which directory its point for fetch/pull and push command  
+ //check all remote name & their value i.e. to which directory the particular remote point to for fetch/pull and push command  
  - git remote -v  
 
  //fetch gets all the change history of a tracked branch/repo from a remote repository  

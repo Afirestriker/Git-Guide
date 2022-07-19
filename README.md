@@ -14,18 +14,18 @@ This repository includes steps for Git pull & push with GitHub
 
  ## Initialized Git for new repository
  //to initialized git  
- git init  
+ - git init  
 
  ## Clone repository from GitHub
  //to clone git, these will add new directory in current folder with the repository name  
- git clone https://github.com/username/repository.git  
+ - git clone https://github.com/username/repository.git  
   
  //to clone specific folder inside repository add folder name at the end of above command with space  
- git clone https://github.com/username/repository.git \<folderName>  
+ - git clone https://github.com/username/repository.git \<folderName>  
  
  
  //check all file including hidden  
- ls -la  
+ - ls -la  
 
  ## Status, Add, Commit
  //check status of file ('Untracked', 'Modified', 'Changes to be committed')  

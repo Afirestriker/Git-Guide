@@ -83,6 +83,7 @@ This repository includes steps for Git pull & push with GitHub
  
  //remove git remote for particular value
  - git remote remove origin
+ - git remote rm origin
   
  //check all remote name & their value i.e. to which directory the particular remote point to for fetch/pull and push command  
  - git remote -v  

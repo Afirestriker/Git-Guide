@@ -27,24 +27,24 @@ This repository includes steps for Git pull & push with GitHub
  //check all file including hidden  
  ls -la  
 
- <br>
+ ## Status, Add, Commit
  //check status of file ('Untracked', 'Modified', 'Changes to be committed')  
  git status  
  git status --short  
-
- <br>
+ 
  //convert untracked files to stagged  
  git add <fileName>  
  git add -A  
 
  git status  
 
+ //Convert Stagged/added file to commit (save point)
  git commit -m "<CustomMessage>"  
 
- //add and commit in one line  
+ //Combining Add & Commit in one command  
  git commit -am "<customMessage>"  
  
- //view the history of commits for a repository (all or last n)  
+ //view the log history of commits for a repository (all log or last n log)  
  git log  
  git log -n <number>  
  

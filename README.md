@@ -11,8 +11,19 @@ This repository includes steps for Git pull & push with GitHub
  git config --global user.email "<email-registered-with-GitHub>"  
 
  <br>
- //cd into the project repository   
+ //cd into the folder where you want to create new or clone project repository   
+
+ ## Initialized Git for new repository
+ //to initialized git  
  git init  
+
+ ## Clone repository from GitHub
+ //to clone git, these will add new directory in current folder with the repository name  
+ git clone <https://github.com/username/repository.git>  
+  
+ //to clone specific folder inside repository add folder name at the end of above command with space  
+ git clone <https://github.com/username/repository.git> <folderName>  
+
 
  <br> 
  //check all file including hidden   
@@ -35,9 +46,10 @@ This repository includes steps for Git pull & push with GitHub
  //add and commit in one line  
  git commit -am "<customMessage>"  
  
- //view the history of commits for a repository  
+ //view the history of commits for a repository (all or last n)  
  git log  
-
+ git log -n <number>  
+ 
  ## Create a new branch  
  //create a new branch  
  git branch <branch-name>  
@@ -62,6 +74,9 @@ This repository includes steps for Git pull & push with GitHub
 
  git remote add origin <https://github.com/username/repository.git>  
  //NOTE: for this you will need PAT (access token) to your github  
+  
+ //check the origin value point to which directory for fetch/pull and push command  
+ git remote -v  
 
 ### Git Pull from GitHub  
  //fetch gets all the change history of a tracked branch/repo from a remote repository  

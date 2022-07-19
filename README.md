@@ -57,7 +57,9 @@ This repository includes steps for Git pull & push with GitHub
 
  //change working branch to the given branch name  
  git checkout <branch-name>  
- git checkout -b <branch-name>  //create and switched the branch, if it does not exist  
+ 
+ //create and switched the branch, if it does not exist  
+ git checkout -b <branch-name>  
 
 ### Merge Branches  
  //first move to main branch (on which we want to merge)  

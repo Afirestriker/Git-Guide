@@ -97,15 +97,18 @@ This repository includes steps for Git pull & push with GitHub
 ### Git Pull branch from GitHub  
  //make new branch at remote repo and then  
  - git pull  
+ 
  //list all branch (local + remote)  
  - git branch -a  
+   
  //switch to new branch  
- - git checkout <branchName>  
+ - git checkout \<branchName>  
  - git pull  
 
 ### Push branch to GitHub  
  //create a new branch in local repo  
  - git branch -b \<branchName>  
+ 
  //make changes and commit, then  
  - git push origin \<new-created-branch-name>  
 

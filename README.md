@@ -22,9 +22,8 @@ This repository includes steps for Git pull & push with GitHub
   
  //to clone specific folder inside repository add folder name at the end of above command with space  
  git clone <https://github.com/username/repository.git> <folderName>  
-
-
- <br> 
+ 
+ 
  //check all file including hidden  
  ls -la  
 

@@ -10,7 +10,6 @@ This repository includes steps for Git pull & push with GitHub
  git config --global user.name "<author/userName>"   
  git config --global user.email "<email-registered-with-GitHub>"  
 
- <br>
  //cd into the folder where you want to create new or clone project repository   
 
  ## Initialized Git for new repository

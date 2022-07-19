@@ -65,10 +65,10 @@ This repository includes steps for Git pull & push with GitHub
  //first move to main branch (on which we want to merge)  
  git checkout master  
 
- git merge <branch-name>  
+ git merge <<branch-name>>  
 
  //delete branch  
- git branch -d \<branch-name\>  
+ git branch -d <<branch-name>>  
 
 ## working with remote repository  
 

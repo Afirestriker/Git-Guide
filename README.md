@@ -38,7 +38,7 @@ This repository includes steps for Git pull & push with GitHub
 
  git status  
 
- //Convert Stagged/added file to commit (save point)
+ //Convert Stagged/added file to commit (save point)  
  git commit -m "<CustomMessage>"  
 
  //Combining Add & Commit in one command  

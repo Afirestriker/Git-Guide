@@ -47,7 +47,7 @@ This repository includes steps for Git pull & push with GitHub
  
  //view the log history of commits for a repository (all log or last n log)  
  - git log 
-  - to exit press 'q'.
+    - to exit press 'q'.
  - git log -n \<number>  
  
  ## Create a new branch  

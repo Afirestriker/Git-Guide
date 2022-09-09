@@ -46,7 +46,8 @@ This repository includes steps for Git pull & push with GitHub
  - git commit -am "customMessage"  
  
  //view the log history of commits for a repository (all log or last n log)  
- - git log  
+ - git log 
+  - to exit press 'q'.
  - git log -n \<number>  
  
  ## Create a new branch  

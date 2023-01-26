@@ -123,4 +123,3 @@ This repository includes steps for Git pull & push with GitHub
  
  //make changes and commit, then  
  - git push origin \<new-created-branch-name>  
-

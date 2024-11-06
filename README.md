@@ -13,6 +13,7 @@ This repository serves as a comprehensive guide to using **Git**. It includes st
 4. [Git Show](#git-show)
 7. [Working with Remote Repositories](#working-with-remote-repositories)
 8. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
+9. [Gitk (GUI)](#gitk)
 
 <!-- updated table of content
 ## Table of contents 
@@ -410,6 +411,21 @@ To create a new branch locally, make changes, commit, and push to Remote:
 git branch -b <branch-name> # create a new branch on local
 git push origin <branch-name> # push new-branch to remote
 ```
+
+---
+
+## Gitk
+
+`gitk` is a graphical user interface (GUI) for Git that allows you to visualize and explore the history of a repository.
+
+- **Purpose**: Open a GUI to view commit history, branches, and tags.
+
+- **Command**:
+  ```bash
+  gitk
+  ```
+  
+- **Usage**: Great for visualizing your commit history and performing complex operations like merges or rebase in a more intuitive way.
 
 ---
 

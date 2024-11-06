@@ -1,125 +1,310 @@
-# Hello World
-Hello World repository for Git tutorial
-This is an example repository for the Git tutorial
 
-This repository includes steps for Git pull & push with GitHub
+# Git Tutorial Repository
 
-> # Git commands and their use
- //global -> set the username and email for every repository on your computer  
- //remove global to set username and email for current repo only.  
- - git config --global user.name "author/userName"   
- - git config --global user.email "email-registered-with-GitHub"  
+This repository serves as a comprehensive guide to using **Git**. It includes step-by-step instructions for basic Git operations such as cloning repositories, managing branches, and performing pull & push actions with **Remote**.
 
- //cd into the folder where you want to create new or clone project repository   
+## Table of Contents
 
- ## Initialized Git for new repository
- //to initialized git  
- - git init  
+1. [Setting Up Git](#setting-up-git)
+2. [Initializing and Cloning Repositories](#initializing-and-cloning-repositories)
+3. [Working with Files (status, add, and commit)](#working-with-files)
+4. [Branch Management](#branch-management)
+5. [Working with Remote Repositories](#working-with-remote-repositories)
+6. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
 
- ## Clone repository from GitHub
- //to clone git, these will add new directory in current folder with the repository name  
- - git clone https://github.com/username/repository.git  
-  
- //to clone specific folder inside repository add folder name at the end of above command with space  
- - git clone https://github.com/username/repository.git \<folderName>  
- 
- 
- //check all file including hidden  
- - ls -la  
+---
 
- ## Status, Add, Commit
- //check status of file ('Untracked', 'Modified', 'Changes to be committed')  
- - git status  
- - git status --short  
- 
- //convert untracked files to stagged  
- - git add \<fileName>  
- - git add -A  
+## Setting Up Git
 
- //After adding, the status should have been "To be committed"  
- - git status  
+Before starting with Git, you need to configure your global Git settings such as your username and email. These settings will be used for all repositories on your local machine unless overridden by repository-specific settings.
 
- //Convert Stagged/added file to commit (save point)  
- - git commit -m "CustomMessage"  
+### Set Global Username and Email
 
- //Combining Add & Commit in one command  
- - git commit -am "customMessage"  
- 
- //view the log history of commits for a repository (all log or last n log)  
- - git log 
-    - to exit press 'q'.
- - git log -n \<number>  
- 
- ## Create a new branch  
- //create a new branch  
- - git branch \<branch-name>  
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
 
- //rename a branch (rename current branch)  
- - git branch -m \<new-branch-name>
- 
- //list all branch  
- - git branch  
+To set username and email for the current repository only (overriding global settings), omit `--global`.
 
- //change working branch to the given branch name  
- - git checkout \<branch-name>  
- 
- //create and switched the branch, if it does not exist  
- - git checkout -b \<branch-name>  
+---
 
-### Merge Branches  
- //first move to main branch (on which we want to merge)  
- - git checkout master  
+## Initializing and Cloning Repositories
 
- - git merge \<branch-name>      //name of the branch which we want to merge  
+### Initialize a New Git Repository
 
- //delete branch  
- - git branch -d \<branch-name>  
+To initialize a new Git repository in the current directory:
 
-# working with remote repository  
- //NOTE: for this you will need PAT (access token) to your GitHub (if using Git Bash)  
- //Recommend: To use Visual Studio - add GitHub to Visual Studio
- 
- - git remote add origin https://github.com/username/repository.git  
-   //NOTE: here name "origin" can be any other name, you can add multiple remote with different name and update or remove them using below command
- 
- //update git remote value for particualar remote
- - git remote set-url origin https://github.com/username/repository.git  
- 
- //remove git remote for particular value
- - git remote remove origin
- - git remote rm origin
-  
- //check all remote name & their value i.e. to which directory the particular remote point to for fetch/pull and push command  
- - git remote -v  
+```bash
+git init
+```
 
- //fetch gets all the change history of a tracked branch/repo from a remote repository  
- - git fetch origin  
+### Clone an Existing Remote Repository
 
-## Git Pull from GitHub  
- //merge combines the current branch, with a specified branch from remote to local repository  
- - git merge origin/master  
+To clone a repository from Remote:
 
- //But what if you just want to update your local repository, without going through all those steps. pull is a combination of fetch and merge.  
- - git pull origin  
+```bash
+git clone <remote-url>
+```
 
-## Git Push to GitHub  
- //make changes to local git repository and push to remote repository after commit  
- - git push origin  
+To clone a specific subfolder from the repository:
 
-### Git Pull branch from GitHub  
- //make new branch at remote repo and then  
- - git pull  
- 
- //list all branch (local + remote)  
- - git branch -a  
-   
- //switch to new branch  
- - git checkout \<branchName>  
- - git pull  
+```bash
+git clone <remote-url> <folder-name>
+```
 
-### Push branch to GitHub  
- //create a new branch in local repo  
- - git branch -b \<branchName>  
- 
- //make changes and commit, then  
- - git push origin \<new-created-branch-name>  
+This will create a new directory with the repository name, or clone only the specified folder.
+
+### Check Files in the Directory
+
+To view all files, including hidden ones:
+
+```bash
+ls -la
+```
+
+---
+
+## Working with Files
+
+### Check the Status of Your Repository
+
+To see the current status of your working directory (untracked, modified, staged files):
+
+```bash
+git status
+```
+
+For a brief, summary view:
+
+```bash
+git status --short
+```
+
+### Add Files to Staging Area
+
+To stage a specific file:
+
+```bash
+git add <file-name>
+```
+
+To stage all changes:
+
+```bash
+git add -A
+```
+
+After staging, you can check the status again to confirm the changes are staged for commit.
+
+### Commit Changes
+
+To commit the staged changes with a custom message:
+
+```bash
+git commit -m "Your commit message"
+```
+
+To combine both staging and committing into one step:
+
+```bash
+git commit -am "Your commit message"
+```
+
+### View Commit History
+
+To view the commit history of the repository:
+
+```bash
+git log
+```
+
+To view the last `n` commits:
+
+```bash
+git log -n <number>
+```
+
+Press `q` to exit the log view.
+
+---
+
+## Branch Management
+
+### Create and Switch Branches
+
+To create a new branch:
+
+```bash
+git branch <branch-name>
+```
+
+To rename the current branch:
+
+```bash
+git branch -m <new-branch-name>
+```
+
+To list all branches:
+
+```bash
+git branch # Lists only local branches, showing the currently active branch with `*`
+
+git branch -l # Lists local branches only (same as `git branch`)
+
+git brahcn -r # Lists only remote-tracking branches, prefixed by the remote name (e.g., `origin/`)
+
+git branch -a # Lists both local branches and remote-tracking branches
+```
+
+To switch to an existing branch:
+
+```bash
+git switch <branch-name> 
+# or
+git checkout <branch-name>
+```
+
+To create and switch to a new branch in one step:
+
+```bash
+git switch -c <new-branch-name>
+# or
+git checkout -b <new-branch-name>
+```
+
+To create a new branch or reset an existing branch and switch to it.
+
+```bash
+git switch -C <new-branch-name>
+# or
+git checkout -B <new-banch-name>
+```
+
+### Merge Branches
+
+To merge changes from another branch into the current branch:
+
+1. Switch to the branch you want to merge into (e.g., `main` or `master`):
+
+   ```bash
+   git checkout master
+   ```
+
+2. Merge the desired branch:
+
+   ```bash
+   git merge <branch-name>
+   ```
+
+### Delete a Branch
+
+To delete a branch that is no longer needed:
+
+```bash
+git branch -d <branch-name> # only if it has been fully merged to it's target branch
+```
+```bash
+git branch -D <branch-name> # force delete a branch, regardless of whether it has been merged or not
+```
+
+---
+
+## Working with Remote Repositories
+
+When working with remote repositories, you'll often need to add, remove, or update remotes.
+
+### Add a Remote Repository
+
+To link your local repository to a remote:
+
+```bash
+git remote add origin <remote-url>
+```
+
+You can add multiple remotes with different names, e.g., `origin`, `upstream`, etc.
+
+### Update a Remote URL
+
+To update the URL for a remote repository:
+
+```bash
+git remote set-url origin <remote-url>
+```
+
+### Remove a Remote Repository
+
+To remove a remote repository:
+
+```bash
+git remote rm origin
+# or
+git remote remove origin
+```
+
+### List All Remote Repositories
+
+To view all remotes associated with the repository:
+
+```bash
+git remote -v
+```
+
+### Fetch Updates from Remote Repository
+
+To fetch all changes from the remote repository without merging:
+
+```bash
+git fetch origin # get all the latest changes from the remote repository (e.g., new branches, tags, or updates to existing branches)
+```
+
+```bash
+git fetch origin <branch-name> # fetch a specific branch (e.g., a feature branch)
+```
+
+---
+
+## Git Pull and Push On Remote
+
+### Pull Changes from Remote
+
+To fetch and merge changes from the remote repository into your local branch:
+
+```bash
+git pull origin <branch-name>
+```
+
+This is equivalent to running `git fetch` followed by `git merge`.
+
+### Push Changes to Remote
+
+To push your local commits to the remote repository:
+
+```bash
+git push origin <branch-name>
+```
+
+This will push your changes to the corresponding branch on Remote.
+
+### Pull a Branch from Remote
+
+To fetch and checkout a new branch from the remote repository:
+
+```bash
+git pull origin <branch-name>
+```
+
+### Push a New Branch to Remote
+
+To create a new branch locally, make changes, commit, and push to Remote:
+
+```bash
+git branch -b <branch-name> # create a new branch on local
+git push origin <branch-name> # push new-branch to remote
+```
+
+---
+
+## Conclusion
+
+This guide covers essential Git commands for interacting with local and remote repositories. By following these steps, you'll be able to effectively manage your projects, collaborate with others, and keep your work organized.

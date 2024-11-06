@@ -8,9 +8,31 @@ This repository serves as a comprehensive guide to using **Git**. It includes st
 1. [Setting Up Git](#setting-up-git)
 2. [Initializing and Cloning Repositories](#initializing-and-cloning-repositories)
 3. [Working with Files (status, add, and commit)](#working-with-files)
-4. [Branch Management](#branch-management)
-5. [Working with Remote Repositories](#working-with-remote-repositories)
-6. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
+4. [Git Stash](#git-stash)
+5. [Branch Management](#branch-management)
+6. [Working with Remote Repositories](#working-with-remote-repositories)
+7. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
+
+<!-- updated table of content
+## Table of contents 
+- [Git Commands and Their Use](#git-commands-and-their-use)
+- [Initialized Git for New Repository](#initialized-git-for-new-repository)
+- [Clone Repository from GitHub](#clone-repository-from-github)
+- [Status, Add, Commit](#status-add-commit)
+- [Git Stash](#git-stash)
+  - [Stash Changes](#stash-changes)
+  - [List Stashes](#list-stashes)
+  - [Apply Stash](#apply-stash)
+  - [Pop Stash](#pop-stash)
+  - [Drop Stash](#drop-stash)
+  - [Clear All Stashes](#clear-all-stashes)
+- [Create a New Branch](#create-a-new-branch)
+- [Merge Branches](#merge-branches)
+- [Working with Remote Repository](#working-with-remote-repository)
+  - [Git Pull from GitHub](#git-pull-from-github)
+  - [Git Push to GitHub](#git-push-to-github)
+  - [Push Branch to GitHub](#push-branch-to-github)
+-->
 
 ---
 
@@ -126,6 +148,69 @@ git log -n <number>
 ```
 
 Press `q` to exit the log view.
+
+---
+
+## Git Stash
+
+`git stash` is used to **temporarily save changes** in your working directory that are not yet ready to commit. This is useful when you need to switch branches but don’t want to commit partial work.
+
+### 1. Stash Changes
+
+- **Purpose**: Save your local changes (including tracked files) without committing them.
+- **Command**: 
+  ```bash
+  git stash
+  ```
+  This will stash changes from the working directory and staging area (i.e., tracked files), but **not** untracked files.
+
+- If you want to **stash both tracked and untracked files**, use the `-u` option:
+  ```bash
+  git stash -u
+  ```
+
+### 2. List Stashes
+
+- **Purpose**: See a list of all stashes you've saved.
+- **Command**:
+  ```bash
+  git stash list
+  ```
+  This will show a list of all the stashes you have saved, along with a reference ID for each stash.
+
+### 3. Apply Stash
+
+- **Purpose**: Reapply the changes from a stash to your working directory.
+- **Command**:
+  ```bash
+  git stash apply [stash@{n}]
+  ```
+  - `[stash@{n}]` is optional. If not specified, the most recent stash will be applied. If you want to apply a specific stash, use the stash ID from `git stash list`.
+
+### 4. Pop Stash
+
+- **Purpose**: Apply a stash and **remove it** from the stash list.
+- **Command**:
+  ```bash
+  git stash pop [stash@{n}]
+  ```
+
+### 5. Drop Stash
+
+- **Purpose**: Delete a stash from the stash list.
+- **Command**:
+  ```bash
+  git stash drop [stash@{n}]
+  ```
+  Use this to delete a specific stash by its ID.
+
+### 6. Clear All Stashes
+
+- **Purpose**: Remove all stashes.
+- **Command**:
+  ```bash
+  git stash clear
+  ```
 
 ---
 

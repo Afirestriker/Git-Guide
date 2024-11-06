@@ -8,10 +8,11 @@ This repository serves as a comprehensive guide to using **Git**. It includes st
 1. [Setting Up Git](#setting-up-git)
 2. [Initializing and Cloning Repositories](#initializing-and-cloning-repositories)
 3. [Working with Files (status, add, and commit)](#working-with-files)
-4. [Git Stash](#git-stash)
-5. [Branch Management](#branch-management)
-6. [Working with Remote Repositories](#working-with-remote-repositories)
-7. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
+4. [Git Show](#git-show)
+5. [Git Stash](#git-stash)
+6. [Branch Management](#branch-management)
+7. [Working with Remote Repositories](#working-with-remote-repositories)
+8. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
 
 <!-- updated table of content
 ## Table of contents 

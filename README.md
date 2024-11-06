@@ -151,18 +151,36 @@ Press `q` to exit the log view.
 
 ---
 
+## Git Show
+
+`git show` displays detailed information about a commit, object, or tag. It’s often used to view the content of a specific commit.
+
+- **Purpose**: Show detailed information about a commit or object.
+
+- **Command**:
+  ```bash
+  git show <commit-hash> # show the commit details, including the commit message, author, date, and the changes made (diff)
+  ```
+
+- **Additional Options**:
+  ```bash
+  git show --stat <commit-hash> # Shows a summary of the files modified in the commit.
+  git show --patch <commit-hash> # Shows the patch (diff) introduced by the commit.
+  ```
+
+---
+
 ## Git Stash
 
 `git stash` is used to **temporarily save changes** in your working directory that are not yet ready to commit. This is useful when you need to switch branches but don’t want to commit partial work.
 
 ### 1. Stash Changes
 
-- **Purpose**: Save your local changes (including tracked files) without committing them.
+- **Purpose**: Save your local changes (including tracked files) without committing them, but **not** untracked files.
 - **Command**: 
   ```bash
   git stash
   ```
-  This will stash changes from the working directory and staging area (i.e., tracked files), but **not** untracked files.
 
 - If you want to **stash both tracked and untracked files**, use the `-u` option:
   ```bash
@@ -172,15 +190,16 @@ Press `q` to exit the log view.
 ### 2. List Stashes
 
 - **Purpose**: See a list of all stashes you've saved.
+
 - **Command**:
   ```bash
-  git stash list
+  git stash list # list all saved stashes, along with reference ID
   ```
-  This will show a list of all the stashes you have saved, along with a reference ID for each stash.
 
 ### 3. Apply Stash
 
 - **Purpose**: Reapply the changes from a stash to your working directory.
+
 - **Command**:
   ```bash
   git stash apply [stash@{n}]
@@ -190,6 +209,7 @@ Press `q` to exit the log view.
 ### 4. Pop Stash
 
 - **Purpose**: Apply a stash and **remove it** from the stash list.
+
 - **Command**:
   ```bash
   git stash pop [stash@{n}]
@@ -198,6 +218,7 @@ Press `q` to exit the log view.
 ### 5. Drop Stash
 
 - **Purpose**: Delete a stash from the stash list.
+
 - **Command**:
   ```bash
   git stash drop [stash@{n}]
@@ -207,6 +228,7 @@ Press `q` to exit the log view.
 ### 6. Clear All Stashes
 
 - **Purpose**: Remove all stashes.
+
 - **Command**:
   ```bash
   git stash clear

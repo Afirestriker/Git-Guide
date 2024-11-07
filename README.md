@@ -13,7 +13,8 @@ This repository serves as a comprehensive guide to using **Git**. It includes st
 4. [Git Show](#git-show)
 7. [Working with Remote Repositories](#working-with-remote-repositories)
 8. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
-9. [Gitk (GUI)](#gitk)
+9. [Git Cherry-Pick](#git-cherry-pick)
+10. [Gitk (GUI)](#gitk)
 
 <!-- updated table of content
 ## Table of contents 
@@ -411,6 +412,63 @@ To create a new branch locally, make changes, commit, and push to Remote:
 git branch -b <branch-name> # create a new branch on local
 git push origin <branch-name> # push new-branch to remote
 ```
+
+---
+
+## Git Cherry-Pick
+
+The `git cherry-pick` command is used to apply the changes introduced by a specific commit from one branch onto another. This is useful when you want to bring over a commit (or multiple commits) without merging the entire branch.
+
+### Usage
+
+To cherry-pick a single commit, use the following syntax:
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+Where `<commit-hash>` is the hash of the commit you want to apply to your current branch.
+
+### Example
+
+Let's say you are on the `feature-branch`, and you want to apply a commit from the `main` branch to your current branch. First, you need to identify the commit hash of the commit you want to cherry-pick. You can do this by running:
+
+```bash
+git log main
+```
+
+Once you have the commit hash, cherry-pick the commit:
+
+```bash
+git cherry-pick abc1234
+```
+
+This will apply the changes from commit `abc1234` to the current branch. If there are no conflicts, Git will automatically create a new commit for this change.
+
+### Handling Conflicts
+
+If there are conflicts during the cherry-pick, Git will stop and allow you to resolve them. After resolving the conflicts, you can continue the cherry-pick process with:
+
+```bash
+git add <resolved-file>
+git cherry-pick --continue
+```
+
+If you want to abort the cherry-pick operation, you can run:
+
+```bash
+git cherry-pick --abort
+```
+
+### Cherry-Picking Multiple Commits
+
+You can also cherry-pick multiple commits at once by providing a commit range:
+
+```bash
+git cherry-pick <start-commit>^..<end-commit>
+```
+
+This will apply all commits from `<start-commit>` to `<end-commit>` (inclusive) to your current branch.
 
 ---
 

@@ -7,14 +7,15 @@ This repository serves as a comprehensive guide to using **Git**. It includes st
 
 1. [Setting Up Git](#setting-up-git)
 2. [Initializing and Cloning Repositories](#initializing-and-cloning-repositories)
-6. [Branch Management](#branch-management)
-3. [Working with Files (status, add, and commit)](#working-with-files)
+3. [Branch Management](#branch-management)
+4. [Working with Files (status, add, and commit)](#working-with-files)
 5. [Git Stash](#git-stash)
-4. [Git Show](#git-show)
-7. [Working with Remote Repositories](#working-with-remote-repositories)
-8. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
-9. [Git Cherry-Pick](#git-cherry-pick)
-10. [Gitk (GUI)](#gitk)
+6. [Git Show](#git-show)
+7. [Git Diff](#git-diff)
+8. [Working with Remote Repositories](#working-with-remote-repositories)
+9. [Git Pull and Push On Remote](#git-pull-and-push-on-remote)
+10. [Git Cherry-Pick](#git-cherry-pick)
+11. [Gitk (GUI)](#gitk)
 
 <!-- updated table of content
 ## Table of contents 
@@ -317,6 +318,61 @@ Press `q` to exit the log view.
   git show --stat <commit-hash> # Shows a summary of the files modified in the commit.
   git show --patch <commit-hash> # Shows the patch (diff) introduced by the commit.
   ```
+
+---
+
+## Git Diff
+
+The `git diff` command is used to show the differences between various states of your repository. You can use it to compare changes in your working directory (not staged), staging area, , between commits, or between branches. By using different options like `--cached`, `--color`, and `--word-diff`, you can customize the output to fit your needs.
+
+### Viewing Changes in the Working Directory
+
+To view the changes you have made in your working directory (but not yet staged), use:
+
+```bash
+git diff
+git diff --color # display the diff with color-coded changes (additions in green and deletions in red)
+git diff --word-diff # view word-level differences.
+```
+
+This will show the differences between your working directory and the index (staging area), i.e., what changes you have made that are not yet staged for commit.
+
+> Note: you can use the flags like `--color`, `--word-diff`, etc... with other `git diff` commands as well. 
+
+### Viewing Staged Changes
+
+To see what changes are staged for the next commit (i.e., what you have added to the index), use:
+
+```bash
+git diff --cached # shows differences between the staging area and the last commit.
+```
+
+### Comparing Two Branches/ Commits/ Tags
+
+Useful for seeing what changes have been made on different branches before merging them. 
+To compare the differences between two branches, use:
+
+```bash
+git diff <branch-1>..<branch-2> # compare differences between branches
+```
+
+```bash
+git diff <commit-hash-1> <commit-hash-2> # compare differences between commits
+```
+
+```bash
+git diff <tag-1> <tag-2> # compare differences between tags
+```
+
+### Viewing Specific Files or Directories
+
+You can limit the `git diff` output to a specific file or directory by specifying it after the command. For example, to see the changes in a particular file:
+
+```bash
+git diff <file-path>
+```
+
+This will show the differences for the file at `<file-path>` in your working directory or staging area.
 
 ---
 
